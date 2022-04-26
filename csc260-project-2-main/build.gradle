@@ -1,0 +1,32 @@
+plugins {
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'java'
+    id 'application'
+}
+
+run {
+    standardInput = System.in
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing']
+}
+
+application {
+    mainClass.set("csc260.ClassDiagramApp")
+}
+
+sourceCompatibility = 1.9
+dependencies {
+    implementation 'junit:junit:4.13.1'
+    implementation 'org.jgrapht:jgrapht:1.5.1'
+    implementation 'org.jgrapht:jgrapht-core:1.5.1'
+}
+
+
+targetCompatibility = JavaVersion.VERSION_1_9

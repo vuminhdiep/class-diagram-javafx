@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.canvas.Canvas?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="csc260.Controller.WhiteCanvasController"
+            prefHeight="400.0" prefWidth="600.0">
+
+        <top>
+            <VBox>
+                <MenuBar>
+                    <Menu text="File">
+                        <MenuItem text="Save" onAction="#onSave"/>
+                        <MenuItem text="Load" onAction="#onLoad"/>
+                        <MenuItem text="Save as Image" onAction="#onSaveImages" />
+                        <MenuItem text="Load"/>
+                    </Menu>
+                </MenuBar>
+                <ToolBar>
+                    <HBox alignment="CENTER" spacing="5">
+
+                        <Button fx:id="class" text="Class" onAction="#addClass" />
+                        <Button fx:id="interface" text="Interface" onAction="#addInterface" />
+                        <Button fx:id="note" text="Note" onAction="#addNote" />
+                        <Button fx:id="delegation" text="D-Arrow" onAction="#addDelegationEdge"/>
+                        <Button fx:id="containment" text="C-Arrow" onAction="#addContainmentEdge"/>
+                        <Button fx:id="inheritance" text="I-Arrow" onAction="#addInheritanceEdge"/>
+                        <Button fx:id="undo" text="Undo" disable="true" onAction="#undoAction" />
+                        <Button fx:id="redo" text="Redo" disable="true" onAction="#redoAction" />
+                    </HBox>
+
+                </ToolBar>
+            </VBox>
+
+        </top>
+<!--        <center>-->
+<!--            <Pane fx:id="pane" maxWidth="1000" maxHeight="1000"/>-->
+<!--        </center>-->
+
+</BorderPane>
